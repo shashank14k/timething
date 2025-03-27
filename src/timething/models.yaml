@@ -69,3 +69,9 @@ arabic:
   pin: "204552cdcaec935142a7d409c194b541985a3808"
   sampling_rate: 16000
   language: "ar"
+
+hindi:
+  model: "ai4bharat/indicwav2vec-hindi"
+  sampling_rate: 16000
+  language: "hi"
+  pin: "e746fa3e8de3f6629b9ded29d9c1c565c566f3db"
