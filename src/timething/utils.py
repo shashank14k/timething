@@ -186,6 +186,12 @@ def best_device():
 def gpu_mps_available():
     return torch.backends.mps.is_available() and torch.backends.mps.is_built()
 
+def cuda_is_built():
+    if hasattr(torch.cuda, "is_built"):
+        return torch.cuda.is_built()
+    else:
+        # Fallback: assume CUDA is built if torch.version.cuda is not None.
+        return True
 
 def gpu_cuda_available():
-    return torch.cuda.is_available() and torch.cuda.is_built()
+    return torch.cuda.is_available() and cuda_is_built()
